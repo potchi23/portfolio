@@ -18,11 +18,14 @@ h1{
     margin-top: 1%;
 
     background-color: #2B2929;
-    position: relative;
     border-radius: 5px;
     
     width: 80%;
-    height: 45rem;
+    height: 30rem;
+
+    max-width: 50rem;
+    max-height: 30rem;
+
     padding-top: 5px
 }
 
@@ -49,7 +52,7 @@ h1{
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 2px;
+    margin: 0px;
 }
 
 .window .window-head .window-buttons #exit{
@@ -69,6 +72,8 @@ h1{
     overflow: scroll;
     overflow-x: hidden;
     margin-top:5px;
+
+    padding:0.5%;
 }
 
 .window .terminal .terminal-content {

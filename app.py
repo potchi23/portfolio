@@ -11,47 +11,66 @@ def index():
 @app.route('/terminal', methods=['GET'])
 def command():
     status = 404
+
     if request.method == 'GET':
         command = request.args.get('command')
+        response=''
 
-        data=''
-        
         if (len(command) == 0):
             status = 200
 
-        elif(command == 'clear'):
-            with open('templates/components/welcome.html', 'r') as welcome:
-                data += welcome.read()
-            
-            status = 302
-
-        elif(command == 'about'):
-            with open('templates/components/about.html', 'r') as about:
-                data += about.read()
-
-            status = 200
-
-        elif(command == 'contact'):
-            with open('templates/components/contact.html', 'r') as about:
-                data += about.read()
-
-            status = 200
-
-        elif(command == 'skills'):
-            with open('templates/components/skills.html', 'r') as about:
-                data += about.read()
-
-            status = 200
-
         else:
-            data += '<p>-bash: ' + html.escape(command) + ': command not found</p>'
+            command = command.split()[0]
+            history.append(command)
 
-            status = 200
-        
+            if(command == 'ls' or command == 'cd'):
+                with open('templates/components/no_directory.html', 'r') as no_directory:
+                    response += no_directory.read()
+                
+                status = 200
+
+            elif(command == 'history'):
+                response += '<p>'
+
+                for h in history:
+                    response += h + '</br>'
+
+                response += '</p>'
+                
+                status = 200
+
+            elif(command == 'clear'):
+                with open('templates/components/welcome.html', 'r') as welcome:
+                    response += welcome.read()
+                
+                status = 302
+
+            elif(command == 'about'):
+                with open('templates/components/about.html', 'r') as about:
+                    response += about.read()
+
+                status = 200
+
+            elif(command == 'contact'):
+                with open('templates/components/contact.html', 'r') as contact:
+                    response += contact.read()
+
+                status = 200
+
+            elif(command == 'skills'):
+                with open('templates/components/skills.html', 'r') as skills:
+                    response += skills.read()
+
+                status = 200
+            
+            else:
+                response += '<p>-bash: ' + html.escape(command) + ': command not found</p>'
+
+                status = 200
+                    
         with open('templates/components/command-line.html', 'r') as command_line:
-                data += command_line.read()
+            response += command_line.read()
 
-        response = data
         return response, status
 
 
@@ -67,5 +86,7 @@ class FlaskConfig:
 
 if __name__ == '__main__':
     app.config.from_object(FlaskConfig())
+
+    history = []
 
     app.run(host='0.0.0.0', port=5000)
