@@ -1,0 +1,98 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #264653;
+    text-align: center;
+    color: white;
+}
+
+a{
+    color:white
+}
+
+h1{
+    margin-top:5rem
+}
+
+.window {
+    display: inline-block;
+    margin-top: 1%;
+
+    background-color: #2B2929;
+    position: relative;
+    border-radius: 5px;
+    
+    width: 80%;
+    height: 45rem;
+    padding-top: 5px
+}
+
+.window .window-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.window .window-head .window-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0.5%;
+    color: white;
+}
+
+.window .window-head .window-buttons{
+    margin-top: 0.5%;
+    margin-right: 10px;
+}
+
+.window .window-head .window-buttons .button{
+    height: 13px;
+    width: 13px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.window .window-head .window-buttons #exit{
+    background-color:#E55F4B;
+}
+
+.window .terminal {
+    font-size: 16px;
+    color: white;
+    background-color: #300A24;
+    
+    border-radius: 5px;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top:5px;
+}
+
+.window .terminal .terminal-content {
+    margin: 1%;
+    text-align: left;
+}
+
+.window .terminal .terminal-content .user-input {
+    font-family: 'Courier New', Courier, monospace;
+    width: 30rem;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color:white;
+    outline:none;
+    display: inline;
+}
+
+.window .terminal .terminal-content .terminal-content-user{
+    color:#85E135;
+    font-weight: bold;
+}
+
+.window .terminal .terminal-content .terminal-content-separator{
+    color:#729CC8;
+    font-weight: bold;
+}

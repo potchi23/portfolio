@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>bash: user@richard</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src= "{{ url_for('static',filename='js/no_name_sorry.js') }}"></script>
+
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    </head>
+
+    <body>
+        <h1></h1>
+
+        <div class='window'>
+            <div class="window-head">
+                <div></div>
+                <div class='window-title'>user@richard:~</div>
+                <div class='window-buttons'>
+                    <div class='button'></div>
+                    <div class='button'></div>
+                    <div class='button' id="exit"></div>
+                </div>
+            </div>
+                     
+            <div class='terminal'>
+                <div class='terminal-content'>
+                    <div>
+                        Hi, I'm Richard Correa! ^.^/</br></br>
+
+                        This is my Ubuntu(ish) command line (it's not fully functional &#x1F602;). </br>
+                        
+                        The source code of this site can be found <a href="https://github.com/potchi23/portfolio">here</a>. </br></br>
+
+                        Please insert any of the commands below to know me a little bit more.</br></br>
+
+                        Commands: skills, contact, about, clear</br></br>
+                    </div>
+
+                    <div>
+                        <span class='terminal-content-user'>user@richard</span><span>:</span><span class='terminal-content-separator'>~</span><span>$</span>
+                        <span>
+                            <input id="command" name="command" class="user-input" type="text"  autocomplete="off" autofocus>
+                        <span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
