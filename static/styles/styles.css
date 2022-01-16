@@ -1,5 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Mono&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic");
+
 body{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "PT Mono", monospace;
+    font-size: 0.9rem;
     background-color: #264653;
     text-align: center;
     color: white;
@@ -20,10 +24,10 @@ h1{
     background-color: #2B2929;
     border-radius: 5px;
     
-    width: 80%;
+    width: 95%;
     height: 30rem;
 
-    max-width: 50%;
+    max-width: 50rem;
     max-height: 30rem;
 
     padding-top: 5px
@@ -35,8 +39,8 @@ h1{
 }
 
 .window .window-head .window-title{
-    font-size: 15px;
-    font-weight: bold;
+    font-family: "PT Sans", monospace;
+    font-size: 13px;
     margin-top: 0.5%;
     color: white;
 }
@@ -60,7 +64,6 @@ h1{
 }
 
 .window .terminal {
-    font-size: 16px;
     color: white;
     background-color: #300A24;
     
@@ -82,11 +85,11 @@ h1{
 }
 
 .window .terminal .terminal-content .user-input {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "PT Mono", monospace;
+    font-size: 0.8rem;
     width: 30rem;
     background: transparent;
     border: none;
-    font-size: 16px;
     color:white;
     outline:none;
     display: inline;
@@ -94,10 +97,14 @@ h1{
 
 .window .terminal .terminal-content .terminal-content-user{
     color:#85E135;
-    font-weight: bold;
 }
 
 .window .terminal .terminal-content .terminal-content-separator{
     color:#729CC8;
     font-weight: bold;
+}
+
+.neofetch{
+    font-family: "PT Mono";
+    font-size: 0.9rem;
 }

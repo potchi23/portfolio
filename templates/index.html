@@ -29,25 +29,8 @@
                      
             <div class='terminal'>
                 <div class='terminal-content'>
-                    <div>
-                        Hi, I'm Richard Correa! ^.^/</br></br>
-
-                        This is my Ubuntu(ish) command line (it's not fully functional &#x1F602;) </br></br>
-                        
-                        The source code of this site can be found <a href="https://github.com/potchi23/portfolio">here</a>. </br></br>
-                        This site is inspired by a portfolio I randomly found on Twitter. Check it out! <a href="https://kristinamarie.me">https://kristinamarie.me</a></br></br>
-
-                        Please insert any of the commands below to know me a little bit more.</br></br>
-
-                        Commands: skills, contact, about, history, clear</br></br>
-                    </div>
-
-                    <div>
-                        <span class='terminal-content-user'>user@richard</span><span>:</span><span class='terminal-content-separator'>~</span><span>$</span>
-                        <span>
-                            <input id="command" name="command" class="user-input" type="text"  autocomplete="off" autofocus>
-                        <span>
-                    </div>
+                    {% include '/components/welcome.html' %}
+                    {% include '/components/command_line.html' %}
                 </div>
             </div>
         </div>

@@ -23,8 +23,8 @@ def command():
             status = 200
 
         else:
-            command = command.split()[0]
             history.append(command)
+            command = command.split()[0]
 
             if(command == 'ls' or command == 'cd'):
                 with open('templates/components/no_directory.html', 'r') as no_directory:
@@ -39,6 +39,12 @@ def command():
                     response += h + '</br>'
 
                 response += '</p>'
+                
+                status = 200
+            
+            elif(command == 'neofetch'):
+                with open('templates/components/neofetch.html', 'r') as welcome:
+                    response += welcome.read()
                 
                 status = 200
 
@@ -71,7 +77,7 @@ def command():
 
                 status = 200
                     
-        with open('templates/components/command-line.html', 'r') as command_line:
+        with open('templates/components/command_line.html', 'r') as command_line:
             response += command_line.read()
 
         return response, status
@@ -79,8 +85,8 @@ def command():
 
 class FlaskConfig:
 
-    ENV = 'production'
-    DEBUG = False
+    ENV = 'development'
+    DEBUG = True
     TEST = False
 
     STATIC_FOLDER = 'static'
