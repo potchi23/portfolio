@@ -42,6 +42,7 @@ h1{
     font-family: "PT Sans", monospace;
     font-size: 13px;
     margin-top: 0.5%;
+    margin-left: 4rem;
     color: white;
 }
 
@@ -75,12 +76,11 @@ h1{
     overflow: scroll;
     overflow-x: hidden;
     margin-top:5px;
-
-    padding:3px;
 }
 
 .window .terminal .terminal-content {
-    margin: 1%;
+    margin: 0.5rem;
+    padding: 0.1rem;
     text-align: left;
 }
 
