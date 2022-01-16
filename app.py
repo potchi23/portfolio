@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/terminal/*": {"origins": "*"}})
 
 @app.route('/', methods=['GET'])
 def index():
@@ -13,9 +13,10 @@ def index():
 @app.route('/terminal', methods=['GET'])
 def command():
     status = 404
-
+    
     if request.method == 'GET':
         command = request.args.get('command')
+
         response=''
 
         if (len(command) == 0):
