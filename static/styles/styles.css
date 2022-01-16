@@ -114,6 +114,6 @@ h1{
         overflow-x: scroll;
     }
     .window .terminal .terminal-content {
-       margin-top: 0.5rem;
+       margin: 0.5rem;
     }
 }
