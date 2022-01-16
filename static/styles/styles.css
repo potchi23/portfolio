@@ -86,7 +86,8 @@ h1{
 .window .terminal .terminal-content .user-input {
     font-family: "PT Mono", monospace;
     font-size: 0.8rem;
-    width: 30rem;
+    width: 40%;
+    min-width: 100px;
     background: transparent;
     border: none;
     color:white;
@@ -106,4 +107,10 @@ h1{
 .neofetch{
     font-family: "PT Mono";
     font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .window .terminal .terminal-content {
+       margin-top: 0.5rem;
+    }
 }
