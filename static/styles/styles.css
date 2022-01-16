@@ -85,7 +85,7 @@ h1{
 
 .window .terminal .terminal-content .user-input {
     font-family: "PT Mono", monospace;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     width: 40%;
     min-width: 100px;
     background: transparent;
@@ -110,6 +110,9 @@ h1{
 }
 
 @media screen and (max-width: 768px) {
+    .window .terminal {
+        overflow-x: scroll;
+    }
     .window .terminal .terminal-content {
        margin-top: 0.5rem;
     }
