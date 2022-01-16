@@ -101,12 +101,45 @@ h1{
 
 .window .terminal .terminal-content .terminal-content-separator{
     color:#729CC8;
-    font-weight: bold;
 }
 
 .neofetch{
     font-family: "PT Mono";
     font-size: 0.9rem;
+}
+
+.typewriter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content;
+    font-size: 80%;
+    padding:3rem;
+}
+
+.typewriter h1{
+    color: #fff;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap;
+    margin: 0 auto;
+    text-shadow: 1px 2px black;
+
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
 }
 
 @media screen and (max-width: 768px) {
