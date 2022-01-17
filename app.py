@@ -1,5 +1,4 @@
 import json
-from django.shortcuts import render
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
