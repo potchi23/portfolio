@@ -1,9 +1,8 @@
-import html
+import json
+from django.shortcuts import render
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
-
-history = []
 
 @app.route('/', methods=['GET'])
 def index():
@@ -12,86 +11,52 @@ def index():
 
 @app.route('/terminal', methods=['GET'])
 def command():
-    status = 404
-    
+
     if request.method == 'GET':
         command = request.args.get('command')
-
-        response=''
+        history = json.loads(request.args.get('history'))
 
         if (len(command) == 0):
-            status = 200
+            return render_template('components/command_line.html'), 200
 
         else:
-            history.append(command)
             command = command.split()[0]
 
             if(command == 'ls' or command == 'cd'):
-                with open('templates/components/no_directory.html', 'r') as no_directory:
-                    response += no_directory.read()
-                
-                status = 200
+                return render_template('components/no_directory.html'), 200
 
             elif(command == 'history'):
-                response += '<p>'
-
-                for h in history:
-                    response += h + '</br>'
-
-                response += '</p>'
-                
-                status = 200
+                return render_template('components/history.html', history=history),200
             
             elif(command == 'neofetch'):
-                with open('templates/components/neofetch.html', 'r') as welcome:
-                    response += welcome.read()
-                
-                status = 200
+                return render_template('components/neofetch.html'), 200      
 
             elif(command == 'clear'):
-                with open('templates/components/welcome.html', 'r') as welcome:
-                    response += welcome.read()
-                
-                status = 302
+                return render_template('components/welcome.html'), 302
 
             elif(command == 'about'):
-                with open('templates/components/about.html', 'r') as about:
-                    response += about.read()
-
-                status = 200
+                return render_template('components/about.html'), 200
 
             elif(command == 'contact'):
-                with open('templates/components/contact.html', 'r') as contact:
-                    response += contact.read()
-
-                status = 200
+                return render_template('components/contact.html'), 200
 
             elif(command == 'skills'):
-                with open('templates/components/skills.html', 'r') as skills:
-                    response += skills.read()
+                return render_template('components/skills.html'), 200
 
-                status = 200
+            elif(command == 'help'):
+                return render_template('components/help.html'), 200
             
             else:
-                response += '<p>-bash: ' + html.escape(command) + ': command not found</p>'
-
-                status = 200
-                    
-        with open('templates/components/command_line.html', 'r') as command_line:
-            response += command_line.read()
-
-        return response, status
-
+                return render_template('components/command_not_found.html', command = command), 200
 
 class FlaskConfig:
 
     ENV = 'development'
-    DEBUG = True
+    DEBUG = False
     TEST = False
 
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
-
 
 if __name__ == '__main__':
     app.config.from_object(FlaskConfig())

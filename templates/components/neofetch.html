@@ -1,24 +1,29 @@
-<pre class="neofetch">
-            .-/+oossssoo+/-.               user@richard
-        `:+ssssssssssssssssss+:`           ------------
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 20.04 LTS x86_64 (maybe...?)
-    .ossssssssssssssssssdMMMNysssso.       Host: Dunno. Some Heroku server
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.4.0-37-generic???
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 10 centuries
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 6 or 7 from pip
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: browser bash 1.0.0
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: <span id="width"><script>$('#width').html($(window).width());</script></span>x<span id="height"><script>$('#height').html($(window).height());</script></span>
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: N/A
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: I don't know
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Terminal
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: This is a terminal so no themes
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: No icons
-  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: Ubuntuish terminal
-   /ssssssssssshdmNNNNmyNMMMMhssssss/      Terminal Font: PT Mono
-    .ossssssssssssssssssdMMMNysssso.       CPU: Casio FX-82MS
-      -+sssssssssssssssssyyyssss+-         GPU: I want a NVIDIA GeForce GTX 3080 Ti
-        `:+ssssssssssssssssss+:`           Memory: never ending
-            .-/+oossssoo+/-.
-                                                                   
-</pre>
+{% block content %}
+<span class="color-w"></span>
+<div>
+  <pre class="neofetch">
+                .-/+oossssoo+/-.             <span class="color-r">user</span>@<span class="color-r">richard</span>
+            `:+ssssssssssssssssss+:`         ------------
+          -+ssssssssssssssssssyyssss+-       <span class="color-r">OS</span>: Ubuntu 20.04 LTS x86_64 (maybe...?)
+        .ossssssssssssssssssdMMMNysssso.     <span class="color-r">Host</span>: Dunno. Some Heroku server
+       /ssssssssssshdmmNNmmyNMMMMhssssss/    <span class="color-r">Kernel</span>: 5.4.0-37-generic???
+      +ssssssssshmydMMMMMMMNddddyssssssss+   <span class="color-r">Uptime</span>: 10 centuries
+     /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/  <span class="color-r">Packages</span>: 6 or 7 from pip
+    .ssssssssdMMMNhsssssssssshNMMMdssssssss. <span class="color-r">Shell</span>: browser bash 1.0.0
+    +sssshhhyNMMNyssssssssssssyNMMMysssssss+ <span class="color-r">Resolution</span>: <span id="width"><script>$('#width').html($(window).width());</script></span>x<span id="height"><script>$('#height').html($(window).height());</script></span>
+    ossyNMMMNyMMhsssssssssssssshmmmhssssssso <span class="color-r">DE</span>: N/A
+    ossyNMMMNyMMhsssssssssssssshmmmhssssssso <span class="color-r">WM</span>: I don't know
+    +sssshhhyNMMNyssssssssssssyNMMMysssssss+ <span class="color-r">WM Theme</span>: Terminal
+    .ssssssssdMMMNhsssssssssshNMMMdssssssss. <span class="color-r">Theme</span>: This is a terminal so no themes
+     /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/  <span class="color-r">Icons</span>: No icons
+      +sssssssssdmydMMMMMMMMddddyssssssss+   <span class="color-r">Terminal</span>: Ubuntuish terminal
+       /ssssssssssshdmNNNNmyNMMMMhssssss/    <span class="color-r">Terminal Font</span>: PT Mono
+        .ossssssssssssssssssdMMMNysssso.     <span class="color-r">CPU</span>: Casio FX-82MS
+          -+sssssssssssssssssyyyssss+-       <span class="color-r">GPU</span>: I want a NVIDIA GeForce GTX 3080 Ti
+            `:+ssssssssssssssssss+:`         <span class="color-r">Memory</span>: never ending
+                .-/+oossssoo+/-.                                                                     
+  </pre>
+</div>
+{% endblock %}
+{% include 'components/command_line.html' %}
         

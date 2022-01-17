@@ -20,7 +20,7 @@ $(document).keydown(function (e) {
         $.ajax({
             url: "/terminal",
             type: "get",
-            data: { "command" : command },
+            data: { "command" : command, "history" : JSON.stringify(command_history) },
             success: (response) => {
                 $("input").attr("disabled", "disabled");
                 $(".terminal-content").append(response);

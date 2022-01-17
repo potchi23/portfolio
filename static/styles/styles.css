@@ -130,6 +130,10 @@ h1{
     blink-caret .5s step-end infinite;
 }
 
+.color-r{
+    color:red;
+}
+
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }

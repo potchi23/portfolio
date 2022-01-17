@@ -32,8 +32,10 @@
                      
             <div class='terminal'>
                 <div class='terminal-content'>
-                    {% include '/components/welcome.html' %}
-                    {% include '/components/command_line.html' %}
+                    {% include 'components/welcome.html' %}
+
+                    {% block content %}
+                    {% endblock %}
                 </div>
             </div>
         </div>
