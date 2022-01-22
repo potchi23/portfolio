@@ -134,6 +134,12 @@ h1{
     color:red;
 }
 
+.CV{
+    font-size: 0.8rem;
+    text-shadow: 1px 1px black;
+    font-weight: normal;
+}
+
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
@@ -153,10 +159,4 @@ h1{
     .window .terminal .terminal-content {
        margin: 0.5rem;
     }
-}
-
-.CV{
-    font-size: 0.8rem;
-    text-shadow: 1px 1px black;
-    font-weight: normal;
 }
