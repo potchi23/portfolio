@@ -1,1 +1,15 @@
 Dockerfile
+*.tex
+*.bib
+*.sty
+*jpg
+*.png
+*.aux
+*.log
+*.fdb_latexmk
+*.synctex*
+*.bcf
+*.out
+*.fls
+*.xml
+*.cut

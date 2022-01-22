@@ -1,5 +1,5 @@
+from flask import Flask, request, render_template, send_from_directory
 import json
-from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -7,6 +7,11 @@ app = Flask(__name__)
 def index():
     if request.method == 'GET':
         return render_template('index.html'), 200
+
+@app.route('/curriculum', methods=['GET'])
+def cv():
+    if request.method == 'GET':
+        return send_from_directory('./resources', 'CV_English.pdf'), 200
 
 @app.route('/terminal', methods=['GET'])
 def command():
