@@ -13,3 +13,4 @@ Dockerfile
 *.fls
 *.xml
 *.cut
+.vercel
